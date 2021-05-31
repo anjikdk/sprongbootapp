@@ -10,5 +10,11 @@ public class SpringbootApplication {
 		System.out.println("main method");
 		SpringApplication.run(SpringbootApplication.class, args);
 	}
+	
+	@GetMapping("/test")
+	public ResponseEntity<String> test()
+	{
+		return new ResponseEntity<String>("Welcome", HttpStatus.OK);
+	}
 
 }
